@@ -1,0 +1,12 @@
+{
+  "name": "pipeline_card_validation",
+  "version": "1.0.0",
+  "description": "An api to validate credit card",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js process.env.kosiKey='trying me '"
+  },
+  "author": "Kaosiliso",
+  "license": "ISC"
+}
