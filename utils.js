@@ -56,11 +56,9 @@ const validateCard = (firstEightDigits) => {
   let data;
   const req = https
     .get(`https://lookup.binlist.net/${firstEightDigits}`, (res) => {
-      console.log(`statusCode: ${res.statusCode}`);
 
       res.on("data", (d) => {
         data += d;
-        // console.log(data);
       });
     })
     .on("end", () => console.log(JSON.parse(data)))
@@ -74,13 +72,7 @@ const validateCvvNumber = (cvv) => {
   if (isNaN(cvv) || cvv.length !== 3) return ["CVV must be a 3 digit"];
   return [];
 };
-console.log(validateCard("41874518"));
 
-// const options = {
-//   hostname: "https://lookup.binlist.net/41874518",
-//   port: 443,
-//   method: "GET",
-// };
 
 const NewGuid = () => {
   var sGuid = "";
